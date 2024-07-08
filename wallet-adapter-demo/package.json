@@ -1,0 +1,51 @@
+{
+  "name": "wallet-adapter-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@bitget-wallet/web3-sdk": "^0.0.8",
+    "@near-wallet-selector/bitget-wallet": "^8.9.5",
+    "@near-wallet-selector/core": "^8.9.5",
+    "@near-wallet-selector/modal-ui": "^8.9.5",
+    "@near-wallet-selector/near-wallet": "^8.9.3",
+    "@rainbow-me/rainbowkit": "^2.0.1",
+    "@tanstack/react-query": "^5.25.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@walletconnect/client": "^1.8.0",
+    "@walletconnect/qrcode-modal": "^1.8.0",
+    "@web3-onboard/bitget": "^2.0.1",
+    "@web3-onboard/common": "^2.3.3",
+    "@web3-onboard/core": "^2.2.12",
+    "@web3-onboard/injected-wallets": "^2.10.11",
+    "@web3modal/wagmi": "^4.0.13",
+    "near-api-js": "^0.44.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "starknet": "^5.24.3",
+    "starknetkit": "^1.1.4",
+    "viem": "^2.7.19",
+    "wagmi": "^2.5.7",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

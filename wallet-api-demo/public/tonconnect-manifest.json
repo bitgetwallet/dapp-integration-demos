@@ -1,0 +1,40 @@
+{
+  "name": "OpenMask - TON wallet",
+  "short_name": "OpenMask",
+  "description": "A TON Wallet in your Browser",
+  "version": "0.20.6",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open the Wallet"
+  },
+  "icons": {
+    "16": "tonmask-logo16.png",
+    "48": "tonmask-logo48.png",
+    "128": "tonmask-logo128.png"
+  },
+  "permissions": [
+    "proxy",
+    "storage",
+    "unlimitedStorage",
+    "clipboardWrite",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["file://*/*", "http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["provider.js"],
+      "matches": ["file://*/*", "http://*/*", "https://*/*"]
+    }
+  ]
+}
