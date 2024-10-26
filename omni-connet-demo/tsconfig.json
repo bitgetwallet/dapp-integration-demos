@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "lib": ["dom", "dom.iterable", "esnext", "ESNext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "checkJs": true,
+    "strict": false,
+    "noEmit": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@store/*": ["src/store/*"],
+      "@shares/*": ["src/shares/*"],
+      "@request/*": ["src/shares/request/*"],
+      "@storage/*": ["src/shares/storage/*"],
+      "@utils/*": ["src/shares/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@constants/*": ["src/constants/*"],
+      "@i18n/*": ["src/i18n/*"],
+      "@@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "assets.d.ts",
+    // "demo/src/**/*.ts",
+    // "demo/src/**/*.tsx",
+    ".next/types/**/*.ts",
+    "demo/src/*/*"
+  ],
+  
+  "exclude": ["node_modules","core/dist"]
+}
