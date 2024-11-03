@@ -12,7 +12,7 @@ const tonConnectUI = new TonConnectUI({
         imageUrl:
           "https://raw.githubusercontent.com/bitkeepwallet/download/main/logo/png/bitget%20wallet_logo_iOS.png",
         aboutUrl: "https://web3.bitget.com",
-        bridgeUrl: "https://bridge.tonapi.io/bridge",
+        bridgeUrl: "https://ton-connect-bridge.bgwapi.io/bridge",
         universalLink: "https://bkcode.vip/ton-connect",
         deepLink: "bitkeep://",
         platforms: ["ios", "android", "chrome"],
