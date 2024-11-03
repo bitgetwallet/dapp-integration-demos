@@ -17,6 +17,15 @@ const tonConnectUI = new TonConnectUI({
         deepLink: "bitkeep://",
         platforms: ["ios", "android", "chrome"],
       },
+      {
+        appName: "bitgetWalletLite",
+        name: "Bitget Wallet Lite",
+        imageUrl: "https://raw.githubusercontent.com/bitgetwallet/download/main/logo/png/bitget_wallet_lite_logo.png",
+        aboutUrl: "https://web3.bitget.com",
+        universalLink: "https://t.me/BitgetWallet_TGBot?attach=wallet",
+        bridgeUrl: "https://ton-connect-bridge.bgwapi.io/bridge",
+        platforms: ["ios", "android", "macos", "windows", "linux"]
+      }
     ],
   },
 });
@@ -32,6 +41,8 @@ export default function TonConnectDApp() {
   const disconnect = async () => await tonConnectUI.disconnect();
   const openBitgetTonWallet = async () =>
     await tonConnectUI.openSingleWalletModal("bitgetTonWallet");
+  const openBitgetWalletLite = async () =>
+    await tonConnectUI.openSingleWalletModal("bitgetWalletLite");
   const getWallets = async () => await tonConnectUI.getWallets();
   const onStatusChange = async () => {
     const unsubscribe = tonConnectUI.onStatusChange((walletInfo) => {
@@ -64,6 +75,7 @@ export default function TonConnectDApp() {
     return await tonConnectUI.sendTransaction(transaction);
   };
   const funcNames = [
+    "openBitgetWalletLite",
     "openBitgetTonWallet",
     "openModal",
     "closeModal",
