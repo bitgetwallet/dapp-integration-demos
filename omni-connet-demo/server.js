@@ -8,6 +8,11 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
 
+  // 设置健康检查路由
+  server.get('/inner/healthCheck', (req, res) => {
+    res.status(200).json({ status: 'healthy' });
+  });
+
   server.all('*', (req, res) => {
     return handle(req, res);
   });
